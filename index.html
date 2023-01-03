@@ -88,7 +88,7 @@ body {
             <input type="number" name="" id="InvInc" autofocus
                >
             
-        <button class="limpiar" onclick="limpiar();">Limpiar campos</button>    
+        <button class="limpiar" id="refresh" onclick="limpiar();">Limpiar campos</button>    
     
             <br>
             <br>
@@ -245,11 +245,10 @@ body {
             
           
             
-        function limpiar(){
-            
-            document.getElementById('').reset();
-        }
-            
+        let refresh = document.getElementById('refresh');
+refresh.addEventListener('click', _ => {
+            location.reload();
+})
             function formula(){
                 
                 var x= parseInt(document.getElementById('InvInc').value);
