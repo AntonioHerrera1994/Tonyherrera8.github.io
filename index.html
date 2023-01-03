@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta charset="utf-8">
     
     <title>Calculadora de inversión</title>
-   
+    <meta charset="utf-8">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
@@ -15,17 +14,6 @@
     <style>
        
         @import url(https://fonts.googleapis.com/css?family=Roboto);
-        @media screen and (max-width: 480px){
-    #encabezado{
-        height: auto;
-    }
-    #contenido{
-        width: auto;
-    }
-    #barra_lateral{
-        display:none;
-    }
-}
      table, th, td {
   border: 0px ;
 }
@@ -97,14 +85,15 @@ body {
     <body>
         <form id="formulario" name="" method="post">
         <label>Inversion inicial:</label>    
-            <input class="InvInicial" type="number" name="" id="InvInc" autofocus>
+            <input type="number" name="" id="InvInc" autofocus
+               >
             
-        <button class="limpiar" onclick="limpiar();">Limpiar campos</button>    
+        <button class="limpiar" id="limpiarid" onclick="limpiar();">Limpiar campos</button>    
     
             <br>
             <br>
             <label>Rendimiento del:</label>
-            <input type="number" name="" id="rendimiento" placeholder="8%" >
+            <input type="number" name="" id="rendimiento" placeholder="8%">
             <br>
             <br>
             
@@ -253,6 +242,9 @@ body {
         
     
         <script type="text/javascript">
+            
+          
+            
         function limpiar(){
             
             document.getElementById('formulario').reset();
